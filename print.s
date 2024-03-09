@@ -1,5 +1,5 @@
 section .data
-    my_string dq "0", 0  ; Null-terminated string
+    my_string dq "", 0  ; Null-terminated string
 
 section .text
     global print_output
@@ -28,7 +28,7 @@ print:
     mov rax, SYSWRITE
     mov rdi, 1   
     mov rsi, my_string
-    mov rdx, 10     
+    mov rdx, 1     
     dec rbx
     syscall
 
